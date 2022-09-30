@@ -1,6 +1,8 @@
 import pickle
 
 
+
+# This is the function for app rating prediction
 def price_prediction(features):
     pickled_model = pickle.load(open('rating_model_prediction.pkl', 'rb'))
     house_price = str(round(list(pickled_model.predict([features]))[0]))
